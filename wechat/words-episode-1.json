@@ -1,0 +1,42 @@
+[
+  {
+    "word": "threshold",
+    "phonetic": "/ˈθreʃhəʊld/",
+    "meaning": "n. 门槛，临界点，起点",
+    "en": "The company is on the threshold of a major breakthrough in AI research.",
+    "zh": "这家公司即将在人工智能研究上取得重大突破。",
+    "tip": "thresh（门槛）+ hold（位置）= 门槛 → 引申为临界点。记住搭配 \"on the threshold of\" = 即将……、处在……的起点。"
+  },
+  {
+    "word": "incentive",
+    "phonetic": "/ɪnˈsentɪv/",
+    "meaning": "n. 激励，动机，奖励",
+    "en": "The company offers financial incentives to employees who exceed their targets.",
+    "zh": "公司向超额完成目标的员工提供经济奖励。",
+    "tip": "in（向内）+ cant（唱）+ ive = 在心里唱歌鼓劲 = 激励。职场常见 \"incentive program\"（激励方案）、\"tax incentive\"（税收优惠）。"
+  },
+  {
+    "word": "stringent",
+    "phonetic": "/ˈstrɪndʒənt/",
+    "meaning": "adj. 严格的，严厉的（多指规定、标准）",
+    "en": "The new regulations impose stringent requirements on data privacy.",
+    "zh": "新法规对数据隐私提出了严格要求。",
+    "tip": "string（绳子）+ ent = 把绳子拉紧 = 严格的。联想把绳子绷紧就不留余地，引申为严苛。常用 \"stringent rules/standards\"。"
+  },
+  {
+    "word": "pragmatic",
+    "phonetic": "/præɡˈmætɪk/",
+    "meaning": "adj. 务实的，注重实效的",
+    "en": "We need a pragmatic approach to solve this problem, not just theory.",
+    "zh": "我们需要用务实的方法解决这个问题，而不只是停留在理论。",
+    "tip": "pragm（做事）+ atic = 讲求实际效果的 = 务实的。同根词 \"practice\"（实践）。夸人常用 \"a pragmatic leader\"（务实的领导）。"
+  },
+  {
+    "word": "circumvent",
+    "phonetic": "/ˌsɜːkəmˈvent/",
+    "meaning": "v. 规避，绕过，回避",
+    "en": "We must find a way to circumvent these technical limitations.",
+    "zh": "我们必须想办法绕过这些技术限制。",
+    "tip": "circum（环绕）+ vent（来）= 绕着走 = 规避。词根 vent = come，同根词有 adventure（冒险）、event（事件）。比 avoid 更书面正式。"
+  }
+]

@@ -1,0 +1,12 @@
+# 微信公众号凭据 - 含密钥，切勿提交
+wechat/config.json
+.env
+*.secret
+
+# WorkBuddy 项目数据与记忆（含私有记录，不公开）
+.workbuddy-ai/
+
+# Python
+__pycache__/
+*.pyc
+venv/

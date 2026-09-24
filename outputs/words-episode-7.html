@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日英语单词 | 第7期 - 2026.09.24</title>
+<style>
+  :root {
+    --bg: #0f0f1a;
+    --card-bg: #1a1a2e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --accent3: #16213e;
+    --text: #eee;
+    --text-muted: #999;
+    --border: rgba(255,255,255,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  .header {
+    text-align: center;
+    padding: 48px 20px 32px;
+    background: linear-gradient(135deg, var(--accent3) 0%, var(--accent2) 100%);
+    border-bottom: 3px solid var(--accent);
+  }
+  .header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .header .subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .header .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 12px;
+    font-weight: 600;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 64px;
+  }
+  .word-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .word-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--accent);
+  }
+  .word-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(233,69,96,0.15);
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .word-num {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .word-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .phonetic {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-style: italic;
+    margin-left: 8px;
+  }
+  .speak-btn {
+    background: rgba(233,69,96,0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .speak-btn:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+  .speak-btn:active {
+    transform: scale(0.92);
+  }
+  .meaning {
+    font-size: 1.05rem;
+    color: #ccc;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent2);
+  }
+  .section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .example {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    color: #ddd;
+  }
+  .example .en {
+    margin-bottom: 6px;
+  }
+  .example .zh {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+  }
+  .tip-box {
+    background: rgba(15,52,96,0.25);
+    border: 1px solid rgba(15,52,96,0.5);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    color: #b0c4de;
+  }
+  .tip-box .section-label {
+    color: #6fa8dc;
+  }
+  .speak-all-bar {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .speak-all-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .speak-all-btn:hover {
+    background: #d63851;
+    box-shadow: 0 4px 20px rgba(233,69,96,0.4);
+  }
+  .footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
+  }
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.4rem; }
+    .word-title { font-size: 1.3rem; }
+    .word-card { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">EPISODE 7</div>
+  <h1>每日英语单词</h1>
+  <div class="subtitle">2026年9月24日 · 第7期 · 5 Words Daily</div>
+</div>
+
+<div class="container">
+  <div class="speak-all-bar">
+    <button class="speak-all-btn" onclick="speakAll()">🔊 依次朗读全部单词</button>
+  </div>
+
+  <!-- Word 1 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 01</span><br>
+        <span class="word-title">delegate</span>
+        <span class="phonetic">/ˈdelɪɡeɪt/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('delegate')">🔊</button>
+    </div>
+    <div class="meaning">v. 委派，授权，下放（权力或任务） &nbsp;|&nbsp; n. 代表</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">A good manager knows when to delegate tasks to team members.</div>
+      <div class="zh">优秀的经理知道何时将任务委派给团队成员。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      de（向下）+ leg（指派，选送，同 leg- 选）+ ate = 向下指派 = 委派。联想：把"leg"伸出去让别人帮你干活，就是 delegate。
+    </div>
+  </div>
+
+  <!-- Word 2 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 02</span><br>
+        <span class="word-title">perceive</span>
+        <span class="phonetic">/pəˈsiːv/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('perceive')">🔊</button>
+    </div>
+    <div class="meaning">v. 察觉，感知，认为，理解</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">Customers perceived the new design as more user-friendly.</div>
+      <div class="zh">顾客认为新设计更加用户友好。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      per（贯穿）+ ceive（取，抓，同 receive/conceive）= 彻底抓住信息 = 感知到。与 receive（收到）、conceive（构思）共享 ceive 词根，一串记住。
+    </div>
+  </div>
+
+  <!-- Word 3 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 03</span><br>
+        <span class="word-title">reluctant</span>
+        <span class="phonetic">/rɪˈlʌktənt/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('reluctant')">🔊</button>
+    </div>
+    <div class="meaning">adj. 不情愿的，勉强的，犹豫的</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">He was reluctant to share his opinion during the meeting.</div>
+      <div class="zh">他在会议上不太情愿分享自己的观点。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      re（反复）+ luct（挣扎，同 struggle）= 反复挣扎 = 不情愿。想象一个人被拖去做事，身体在反复挣扎 reluctance。谐音"赖着不肯"。
+    </div>
+  </div>
+
+  <!-- Word 4 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 04</span><br>
+        <span class="word-title">guarantee</span>
+        <span class="phonetic">/ˌɡærənˈtiː/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('guarantee')">🔊</button>
+    </div>
+    <div class="meaning">v. 保证，担保 &nbsp;|&nbsp; n. 保修，保证书</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">We guarantee that all products will be delivered within 48 hours.</div>
+      <div class="zh">我们保证所有产品将在48小时内送达。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      来自 guaranty（担保），后缀 -ee 表示"被保证的人/物"。谐音"该让提"——既然保证了，就该让你提要求。生活中常见的 warranty 就是同源词。
+    </div>
+  </div>
+
+  <!-- Word 5 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 05</span><br>
+        <span class="word-title">dilemma</span>
+        <span class="phonetic">/dɪˈlemə/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('dilemma')">🔊</button>
+    </div>
+    <div class="meaning">n. 困境，两难，进退维谷</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">She faced a dilemma: accept the promotion or spend more time with family.</div>
+      <div class="zh">她面临两难：接受晋升还是花更多时间陪伴家人。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      di（两个）+ lemma（命题，前提）= 两个前提都成立但只能选一个 = 两难。谐音"地雷嘛"——踩到哪个都麻烦，形象记忆困境感。
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  WorkBuddy AI · 每日英语单词 · 第7期<br>
+  累计推荐 35 词 | 开启每日进步之旅
+</div>
+
+<script>
+  function speakWord(word) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      var utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.85;
+      utterance.pitch = 1;
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert('当前浏览器不支持语音朗读功能');
+    }
+  }
+
+  function speakAll() {
+    if (!('speechSynthesis' in window)) {
+      alert('当前浏览器不支持语音朗读功能');
+      return;
+    }
+    var words = ['delegate', 'perceive', 'reluctant', 'guarantee', 'dilemma'];
+    window.speechSynthesis.cancel();
+    words.forEach(function(word, i) {
+      var utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.8;
+      utterance.pitch = 1;
+      window.speechSynthesis.speak(utterance);
+    });
+  }
+</script>
+
+</body>
+</html>

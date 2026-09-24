@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日英语单词 | 第6期 - 2026.09.23</title>
+<style>
+  :root {
+    --bg: #0f0f1a;
+    --card-bg: #1a1a2e;
+    --accent: #e94560;
+    --accent2: #0f3460;
+    --accent3: #16213e;
+    --text: #eee;
+    --text-muted: #999;
+    --border: rgba(255,255,255,0.08);
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Helvetica Neue', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    min-height: 100vh;
+  }
+  .header {
+    text-align: center;
+    padding: 48px 20px 32px;
+    background: linear-gradient(135deg, var(--accent3) 0%, var(--accent2) 100%);
+    border-bottom: 3px solid var(--accent);
+  }
+  .header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .header .subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+  }
+  .header .badge {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    padding: 4px 16px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    margin-top: 12px;
+    font-weight: 600;
+  }
+  .container {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 32px 16px 64px;
+  }
+  .word-card {
+    background: var(--card-bg);
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 24px;
+    border: 1px solid var(--border);
+    transition: transform 0.2s, box-shadow 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .word-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 100%;
+    background: var(--accent);
+  }
+  .word-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(233,69,96,0.15);
+  }
+  .card-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+  }
+  .word-num {
+    font-size: 0.75rem;
+    color: var(--accent);
+    font-weight: 700;
+    letter-spacing: 1px;
+  }
+  .word-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #fff;
+  }
+  .phonetic {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-style: italic;
+    margin-left: 8px;
+  }
+  .speak-btn {
+    background: rgba(233,69,96,0.15);
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+    flex-shrink: 0;
+  }
+  .speak-btn:hover {
+    background: var(--accent);
+    color: #fff;
+  }
+  .speak-btn:active {
+    transform: scale(0.92);
+  }
+  .meaning {
+    font-size: 1.05rem;
+    color: #ccc;
+    margin-bottom: 16px;
+    padding-left: 12px;
+    border-left: 2px solid var(--accent2);
+  }
+  .section-label {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+  }
+  .example {
+    background: rgba(255,255,255,0.03);
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    color: #ddd;
+  }
+  .example .en {
+    margin-bottom: 6px;
+  }
+  .example .zh {
+    color: var(--text-muted);
+    font-size: 0.88rem;
+  }
+  .tip-box {
+    background: rgba(15,52,96,0.25);
+    border: 1px solid rgba(15,52,96,0.5);
+    border-radius: 10px;
+    padding: 14px 16px;
+    font-size: 0.88rem;
+    color: #b0c4de;
+  }
+  .tip-box .section-label {
+    color: #6fa8dc;
+  }
+  .speak-all-bar {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+  .speak-all-btn {
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 12px 32px;
+    border-radius: 30px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .speak-all-btn:hover {
+    background: #d63851;
+    box-shadow: 0 4px 20px rgba(233,69,96,0.4);
+  }
+  .footer {
+    text-align: center;
+    padding: 24px;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    border-top: 1px solid var(--border);
+    margin-top: 16px;
+  }
+  @media (max-width: 600px) {
+    .header h1 { font-size: 1.4rem; }
+    .word-title { font-size: 1.3rem; }
+    .word-card { padding: 20px 16px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="badge">EPISODE 6</div>
+  <h1>每日英语单词</h1>
+  <div class="subtitle">2026年9月23日 · 第6期 · 5 Words Daily</div>
+</div>
+
+<div class="container">
+  <div class="speak-all-bar">
+    <button class="speak-all-btn" onclick="speakAll()">🔊 依次朗读全部单词</button>
+  </div>
+
+  <!-- Word 1 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 01</span><br>
+        <span class="word-title">endeavor</span>
+        <span class="phonetic">/ɪnˈdevər/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('endeavor')">🔊</button>
+    </div>
+    <div class="meaning">v. 努力，尽力，竭力 &nbsp;|&nbsp; n. 努力，尝试</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">We will endeavor to complete the project ahead of schedule.</div>
+      <div class="zh">我们将努力提前完成这个项目。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      en（使）+ deavor（deed，行动）= 使之行动 = 尽力去做。联想到"努力deavor"谐音"的努力的ver"。
+    </div>
+  </div>
+
+  <!-- Word 2 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 02</span><br>
+        <span class="word-title">consensus</span>
+        <span class="phonetic">/kənˈsensəs/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('consensus')">🔊</button>
+    </div>
+    <div class="meaning">n. 共识，一致意见</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">The team reached a consensus on the new marketing strategy.</div>
+      <div class="zh">团队就新的营销策略达成了共识。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      con（共同）+ sensus（sense，感觉）= 共同的感觉 = 共识。大家都"sense"到同一个方向，就是共识。
+    </div>
+  </div>
+
+  <!-- Word 3 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 03</span><br>
+        <span class="word-title">milestone</span>
+        <span class="phonetic">/ˈmaɪlstəʊn/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('milestone')">🔊</button>
+    </div>
+    <div class="meaning">n. 里程碑，重大事件，重要阶段</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">Launching the product was a major milestone for our startup.</div>
+      <div class="zh">产品发布是我们初创公司的一个重要里程碑。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      mile（英里）+ stone（石头）= 路边每隔一英里放的里程碑石。引申为人生或项目中的重要节点。
+    </div>
+  </div>
+
+  <!-- Word 4 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 04</span><br>
+        <span class="word-title">scrutinize</span>
+        <span class="phonetic">/ˈskruːtənaɪz/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('scrutinize')">🔊</button>
+    </div>
+    <div class="meaning">v. 仔细检查，详审，细看</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">The manager scrutinized the financial report for any errors.</div>
+      <div class="zh">经理仔细检查了财务报告，看是否有任何错误。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      来自拉丁语 scrutari（仔细搜索），联想到"scrut（scrutiny 审查）+ nize（动词后缀）"。想象拿放大镜scrutinize每个细节。
+    </div>
+  </div>
+
+  <!-- Word 5 -->
+  <div class="word-card">
+    <div class="card-header">
+      <div>
+        <span class="word-num">WORD 05</span><br>
+        <span class="word-title">articulate</span>
+        <span class="phonetic">/ɑːˈtɪkjʊleɪt/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('articulate')">🔊</button>
+    </div>
+    <div class="meaning">v. 清晰地表达 &nbsp;|&nbsp; adj. 表达清晰的，善于表达的</div>
+    <div class="section-label">Example</div>
+    <div class="example">
+      <div class="en">She articulated her ideas so clearly that everyone understood.</div>
+      <div class="zh">她把想法表达得如此清晰，以至于每个人都听懂了。</div>
+    </div>
+    <div class="tip-box">
+      <div class="section-label">Memory Tip</div>
+      art（技巧）+ ticul（小关节）+ ate = 用技巧把每个小关节连接起来 = 清晰表达。articulate的人说话像艺术品。
+    </div>
+  </div>
+
+</div>
+
+<div class="footer">
+  WorkBuddy AI · 每日英语单词 · 第6期<br>
+  累计推荐 30 词 | 开启每日进步之旅
+</div>
+
+<script>
+  function speakWord(word) {
+    if ('speechSynthesis' in window) {
+      window.speechSynthesis.cancel();
+      var utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.85;
+      utterance.pitch = 1;
+      window.speechSynthesis.speak(utterance);
+    } else {
+      alert('当前浏览器不支持语音朗读功能');
+    }
+  }
+
+  function speakAll() {
+    if (!('speechSynthesis' in window)) {
+      alert('当前浏览器不支持语音朗读功能');
+      return;
+    }
+    var words = ['endeavor', 'consensus', 'milestone', 'scrutinize', 'articulate'];
+    window.speechSynthesis.cancel();
+    words.forEach(function(word, i) {
+      var utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.8;
+      utterance.pitch = 1;
+      window.speechSynthesis.speak(utterance);
+    });
+  }
+</script>
+
+</body>
+</html>

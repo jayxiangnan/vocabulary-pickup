@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日英语单词 - 第3期 | 2026-09-20</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Helvetica Neue", sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+    color: #333;
+  }
+  .container {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+  .header {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 30px;
+  }
+  .header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+  }
+  .header .subtitle {
+    font-size: 15px;
+    opacity: 0.85;
+  }
+  .word-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 24px;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .word-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+  }
+  .word-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+  .word-title {
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .word-num {
+    font-size: 14px;
+    color: #999;
+    font-weight: 600;
+  }
+  .word-english {
+    font-size: 28px;
+    font-weight: 700;
+    color: #2c3e50;
+  }
+  .word-phonetic {
+    font-size: 16px;
+    color: #7f8c8d;
+    font-style: italic;
+  }
+  .speak-btn {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    flex-shrink: 0;
+  }
+  .speak-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 16px rgba(102,126,234,0.5);
+  }
+  .speak-btn:active { transform: scale(0.95); }
+  .word-meaning {
+    font-size: 17px;
+    color: #2c3e50;
+    margin-bottom: 14px;
+    font-weight: 500;
+  }
+  .word-example {
+    background: #f8f9fa;
+    border-left: 4px solid #667eea;
+    padding: 14px 16px;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 14px;
+  }
+  .example-en {
+    font-size: 15px;
+    color: #34495e;
+    margin-bottom: 6px;
+    line-height: 1.6;
+  }
+  .example-cn {
+    font-size: 14px;
+    color: #7f8c8d;
+    line-height: 1.6;
+  }
+  .word-tip {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    background: #fff8e7;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid #ffe082;
+  }
+  .tip-icon { font-size: 18px; flex-shrink: 0; }
+  .tip-text {
+    font-size: 14px;
+    color: #795548;
+    line-height: 1.6;
+  }
+  .footer {
+    text-align: center;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    margin-top: 30px;
+    padding-bottom: 20px;
+  }
+  .speak-all-btn {
+    display: block;
+    margin: 0 auto 24px;
+    background: rgba(255,255,255,0.2);
+    color: #fff;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 30px;
+    padding: 10px 32px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .speak-all-btn:hover {
+    background: rgba(255,255,255,0.3);
+  }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📖 每日英语单词</h1>
+    <p class="subtitle">第 3 期 · 2026-09-20</p>
+  </div>
+
+  <button class="speak-all-btn" onclick="speakAll()">🔊 朗读全部单词</button>
+
+  <!-- Word 1 -->
+  <div class="word-card">
+    <div class="word-header">
+      <div class="word-title">
+        <span class="word-num">01</span>
+        <span class="word-english">proactive</span>
+        <span class="word-phonetic">/prəʊˈæktɪv/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('proactive')">🔊</button>
+    </div>
+    <div class="word-meaning">adj. 积极主动的，抢先一步的</div>
+    <div class="word-example">
+      <div class="example-en">She took a <strong>proactive</strong> approach to problem-solving, anticipating issues before they arose.</div>
+      <div class="example-cn">她采取了积极主动的方式来解决问题，在问题出现之前就预见到它们。</div>
+    </div>
+    <div class="word-tip">
+      <span class="tip-icon">💡</span>
+      <span class="tip-text"><strong>记忆小贴士：</strong>pro（向前）+ active（活跃的）= 提前活跃起来 = "积极主动的"。想想 pro 表示"在前面"，主动走到问题前面去解决它。</span>
+    </div>
+  </div>
+
+  <!-- Word 2 -->
+  <div class="word-card">
+    <div class="word-header">
+      <div class="word-title">
+        <span class="word-num">02</span>
+        <span class="word-english">efficient</span>
+        <span class="word-phonetic">/ɪˈfɪʃnt/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('efficient')">🔊</button>
+    </div>
+    <div class="word-meaning">adj. 高效的，有效率的</div>
+    <div class="word-example">
+      <div class="example-en">The new software made our workflow much more <strong>efficient</strong>, saving us hours each week.</div>
+      <div class="example-cn">新软件让我们的工作流程更加高效，每周节省了几个小时。</div>
+    </div>
+    <div class="word-tip">
+      <span class="tip-icon">💡</span>
+      <span class="tip-text"><strong>记忆小贴士：</strong>和 effect（效果）同源，efficient 就是"有效果的" → "高效的"。注意不要和 sufficient（足够的）混淆，suffi- 开头联想 "suf = 足够"。</span>
+    </div>
+  </div>
+
+  <!-- Word 3 -->
+  <div class="word-card">
+    <div class="word-header">
+      <div class="word-title">
+        <span class="word-num">03</span>
+        <span class="word-english">resilient</span>
+        <span class="word-phonetic">/rɪˈzɪliənt/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('resilient')">🔊</button>
+    </div>
+    <div class="word-meaning">adj. 有韧性的，能迅速恢复的</div>
+    <div class="word-example">
+      <div class="example-en">Despite multiple setbacks, the team proved to be highly <strong>resilient</strong> and bounced back quickly.</div>
+      <div class="example-cn">尽管遭遇了多次挫折，团队证明了他们非常有韧性，很快就恢复了过来。</div>
+    </div>
+    <div class="word-tip">
+      <span class="tip-icon">💡</span>
+      <span class="tip-text"><strong>记忆小贴士：</strong>re（回/再）+ sili（跳）= 跳回来 = "恢复力"。联想弹簧，被压下去后弹回来——有韧性的就是像弹簧一样能回弹的人或事物。</span>
+    </div>
+  </div>
+
+  <!-- Word 4 -->
+  <div class="word-card">
+    <div class="word-header">
+      <div class="word-title">
+        <span class="word-num">04</span>
+        <span class="word-english">transparent</span>
+        <span class="word-phonetic">/trænsˈpærənt/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('transparent')">🔊</button>
+    </div>
+    <div class="word-meaning">adj. 透明的，公开透明的</div>
+    <div class="word-example">
+      <div class="example-en">The company maintained a <strong>transparent</strong> hiring process so every candidate understood the criteria.</div>
+      <div class="example-cn">公司保持了透明的招聘流程，每位候选人都能清楚了解选拔标准。</div>
+    </div>
+    <div class="word-tip">
+      <span class="tip-icon">💡</span>
+      <span class="tip-text"><strong>记忆小贴士：</strong>trans（穿过）+ parent（来自 appear 出现）= 光能穿过去 = "透明的"。延伸义指"公开透明"，就像你能透过玻璃看到里面的一切。</span>
+    </div>
+  </div>
+
+  <!-- Word 5 -->
+  <div class="word-card">
+    <div class="word-header">
+      <div class="word-title">
+        <span class="word-num">05</span>
+        <span class="word-english">concise</span>
+        <span class="word-phonetic">/kənˈsaɪs/</span>
+      </div>
+      <button class="speak-btn" onclick="speakWord('concise')">🔊</button>
+    </div>
+    <div class="word-meaning">adj. 简洁的，言简意赅的</div>
+    <div class="word-example">
+      <div class="example-en">Her presentation was <strong>concise</strong> and powerful — she covered everything in just ten minutes.</div>
+      <div class="example-cn">她的演示简洁而有力——仅用十分钟就涵盖了所有内容。</div>
+    </div>
+    <div class="word-tip">
+      <span class="tip-icon">💡</span>
+      <span class="tip-text"><strong>记忆小贴士：</strong>con（共同/全部）+ cise（切）= 全部切掉多余的 = "简洁的"。cise 词根 = cut（切），联想"切掉啰嗦的部分，留下精华"。</span>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>📚 每日 5 词 · 坚持就是胜利</p>
+    <p style="margin-top:4px;">第 3 期 · 共 3 期</p>
+  </div>
+</div>
+
+<script>
+  function speakWord(word) {
+    if (!('speechSynthesis' in window)) {
+      alert('您的浏览器不支持语音朗读功能');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    var utterance = new SpeechSynthesisUtterance(word);
+    utterance.lang = 'en-US';
+    utterance.rate = 0.85;
+    utterance.pitch = 1;
+    window.speechSynthesis.speak(utterance);
+  }
+
+  function speakAll() {
+    if (!('speechSynthesis' in window)) {
+      alert('您的浏览器不支持语音朗读功能');
+      return;
+    }
+    window.speechSynthesis.cancel();
+    var words = ['proactive', 'efficient', 'resilient', 'transparent', 'concise'];
+    words.forEach(function(word, index) {
+      var utterance = new SpeechSynthesisUtterance(word);
+      utterance.lang = 'en-US';
+      utterance.rate = 0.85;
+      utterance.pitch = 1;
+      // Stagger by appending; browser queues them automatically
+      window.speechSynthesis.speak(utterance);
+    });
+  }
+</script>
+</body>
+</html>
