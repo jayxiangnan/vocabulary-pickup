@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日英语单词 · 公众号第2期 | 2026-09-25</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        .container { max-width: 680px; margin: 0 auto; }
+        .header {
+            text-align: center;
+            color: #fff;
+            padding: 30px 20px 20px;
+        }
+        .header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+        .header .date { font-size: 15px; opacity: 0.85; }
+        .header .episode { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 16px; border-radius: 20px; font-size: 13px; margin-top: 10px; }
+        .word-list { display: flex; flex-direction: column; gap: 16px; margin-top: 24px; }
+        .word-card {
+            background: #fff;
+            border-radius: 16px;
+            padding: 24px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .word-card:hover { transform: translateY(-2px); box-shadow: 0 6px 28px rgba(0,0,0,0.15); }
+        .word-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+        .word-num {
+            width: 36px; height: 36px;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 16px; font-weight: 700; flex-shrink: 0;
+        }
+        .word-title { flex: 1; margin-left: 14px; }
+        .word-english { font-size: 24px; font-weight: 700; color: #2c3e50; }
+        .word-phonetic { font-size: 14px; color: #7f8c8d; margin-top: 2px; font-family: 'Courier New', monospace; }
+        .speak-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: #fff; border: none;
+            width: 40px; height: 40px;
+            border-radius: 50%; cursor: pointer;
+            font-size: 18px; flex-shrink: 0;
+            display: flex; align-items: center; justify-content: center;
+            transition: transform 0.15s;
+        }
+        .speak-btn:hover { transform: scale(1.1); }
+        .speak-btn:active { transform: scale(0.95); }
+        .word-meaning { font-size: 16px; color: #34495e; margin-bottom: 12px; font-weight: 600; }
+        .word-example {
+            background: #f8f9fa;
+            border-left: 3px solid #667eea;
+            padding: 12px 14px;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 12px;
+        }
+        .word-example .en { font-size: 15px; color: #2c3e50; line-height: 1.6; margin-bottom: 4px; }
+        .word-example .zh { font-size: 14px; color: #7f8c8d; }
+        .word-tip {
+            display: flex; align-items: flex-start; gap: 8px;
+            font-size: 14px; color: #8e44ad;
+        }
+        .word-tip .icon { flex-shrink: 0; }
+        .footer {
+            text-align: center; color: rgba(255,255,255,0.8);
+            font-size: 13px; padding: 24px 0 10px;
+        }
+        .footer a { color: #fff; text-decoration: underline; }
+        .all-speak {
+            display: block; margin: 20px auto 0;
+            background: rgba(255,255,255,0.2);
+            color: #fff; border: 2px solid rgba(255,255,255,0.5);
+            padding: 10px 28px; border-radius: 25px;
+            font-size: 15px; cursor: pointer;
+            transition: background 0.2s;
+        }
+        .all-speak:hover { background: rgba(255,255,255,0.3); }
+        @media (max-width: 480px) {
+            .word-english { font-size: 20px; }
+            .word-card { padding: 18px; }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>每日英语单词</h1>
+        <div class="date">2026年9月25日 · 星期五</div>
+        <div class="episode">第 2 期</div>
+    </div>
+
+    <button class="all-speak" onclick="speakAll()">🔊 依次朗读全部单词</button>
+
+    <div class="word-list">
+
+        <div class="word-card">
+            <div class="word-header">
+                <div class="word-num">1</div>
+                <div class="word-title">
+                    <div class="word-english">synergy</div>
+                    <div class="word-phonetic">/ˈsɪnədʒi/</div>
+                </div>
+                <button class="speak-btn" onclick="speak('synergy. Synergy means the combined power of things working together that is greater than the total power of each working alone.')">🔊</button>
+            </div>
+            <div class="word-meaning">n. 协同，协同效应</div>
+            <div class="word-example">
+                <div class="en">The merger created synergy between the two companies' technologies.</div>
+                <div class="zh">这次合并让两家公司的技术产生了协同效应。</div>
+            </div>
+            <div class="word-tip"><span class="icon">💡</span><span>syn（共同）+ erg（工作、能量）= 共同发力 = 协同。同根词 energy（能量）。职场高频用法：synergy effect = 协同效应，常指 1+1>2 的效果。</span></div>
+        </div>
+
+        <div class="word-card">
+            <div class="word-header">
+                <div class="word-num">2</div>
+                <div class="word-title">
+                    <div class="word-english">revenue</div>
+                    <div class="word-phonetic">/ˈrevənjuː/</div>
+                </div>
+                <button class="speak-btn" onclick="speak('revenue. Revenue means the money that a company or organization receives from its business activities.')">🔊</button>
+            </div>
+            <div class="word-meaning">n. 收入，营收</div>
+            <div class="word-example">
+                <div class="en">The company's annual revenue exceeded one billion dollars last year.</div>
+                <div class="zh">公司去年年收入超过十亿美元。</div>
+            </div>
+            <div class="word-tip"><span class="icon">💡</span><span>re（回）+ ven（来）= 钱回到手里 = 收入。词根 ven/vent = come，同根词有 convention（集会）、event（事件）。财报高频：revenue growth = 收入增长。</span></div>
+        </div>
+
+        <div class="word-card">
+            <div class="word-header">
+                <div class="word-num">3</div>
+                <div class="word-title">
+                    <div class="word-english">nominate</div>
+                    <div class="word-phonetic">/ˈnɒmɪneɪt/</div>
+                </div>
+                <button class="speak-btn" onclick="speak('nominate. To nominate means to formally suggest someone for an award or a position.')">🔊</button>
+            </div>
+            <div class="word-meaning">v. 提名，任命</div>
+            <div class="word-example">
+                <div class="en">She was nominated for the Employee of the Year award.</div>
+                <div class="zh">她被提名为年度最佳员工。</div>
+            </div>
+            <div class="word-tip"><span class="icon">💡</span><span>nomin（名字）+ ate（动词后缀）= 报上名字 = 提名。同根词 nomination（提名）、nominee（被提名人）、nomenclature（术语表）。</span></div>
+        </div>
+
+        <div class="word-card">
+            <div class="word-header">
+                <div class="word-num">4</div>
+                <div class="word-title">
+                    <div class="word-english">obstacle</div>
+                    <div class="word-phonetic">/ˈɒbstəkl/</div>
+                </div>
+                <button class="speak-btn" onclick="speak('obstacle. An obstacle is something that blocks your way or makes it difficult to do something.')">🔊</button>
+            </div>
+            <div class="word-meaning">n. 障碍，阻碍</div>
+            <div class="word-example">
+                <div class="en">Lack of funding was the biggest obstacle to completing the project.</div>
+                <div class="zh">资金不足是完成这个项目的最大障碍。</div>
+            </div>
+            <div class="word-tip"><span class="icon">💡</span><span>ob（反、对着）+ sta（站立）= 对着站 = 挡路 = 障碍。词根 sta/stare = stand，同根词 stable（稳定的）、status（状态）、station（站点）。</span></div>
+        </div>
+
+        <div class="word-card">
+            <div class="word-header">
+                <div class="word-num">5</div>
+                <div class="word-title">
+                    <div class="word-english">genuine</div>
+                    <div class="word-phonetic">/ˈdʒenjuɪn/</div>
+                </div>
+                <button class="speak-btn" onclick="speak('genuine. Genuine means real and exactly what it appears to be, or sincere and honest.')">🔊</button>
+            </div>
+            <div class="word-meaning">adj. 真诚的，真正的</div>
+            <div class="word-example">
+                <div class="en">He showed genuine concern for his colleagues' well-being.</div>
+                <div class="zh">他对同事的身心健康表现出了真诚的关心。</div>
+            </div>
+            <div class="word-tip"><span class="icon">💡</span><span>gen（出生、产生）+ uine = 天生的 = 真正的。同根词 genius（天才）、generate（产生）、genesis（起源）。形容人："a genuine person" = 真诚的人。</span></div>
+        </div>
+
+    </div>
+
+    <div class="footer">
+        <p>📖 每日5词 · 持续积累 · 日拱一卒</p>
+        <p style="margin-top:6px;">点击 🔊 按钮可朗读单词发音 · 词汇拾光</p>
+    </div>
+</div>
+
+<script>
+    function speak(text) {
+        if ('speechSynthesis' in window) {
+            window.speechSynthesis.cancel();
+            var u = new SpeechSynthesisUtterance(text);
+            u.lang = 'en-US';
+            u.rate = 0.85;
+            window.speechSynthesis.speak(u);
+        }
+    }
+    function speakAll() {
+        var words = [
+            'synergy. Synergy means the combined power of things working together that is greater than the total power of each working alone.',
+            'revenue. Revenue means the money that a company or organization receives from its business activities.',
+            'nominate. To nominate means to formally suggest someone for an award or a position.',
+            'obstacle. An obstacle is something that blocks your way or makes it difficult to do something.',
+            'genuine. Genuine means real and exactly what it appears to be, or sincere and honest.'
+        ];
+        if (!('speechSynthesis' in window)) return;
+        window.speechSynthesis.cancel();
+        words.forEach(function(w, i) {
+            var u = new SpeechSynthesisUtterance(w);
+            u.lang = 'en-US';
+            u.rate = 0.85;
+            window.speechSynthesis.speak(u);
+        });
+    }
+</script>
+</body>
+</html>

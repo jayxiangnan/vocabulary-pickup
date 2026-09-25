@@ -3,6 +3,9 @@ wechat/config.json
 .env
 *.secret
 
+# 自动生成的封面图（构建产物，勿入库）
+wechat/cover-*.png
+
 # WorkBuddy 项目数据与记忆（含私有记录，不公开）
 .workbuddy-ai/
 
