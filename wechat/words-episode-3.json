@@ -1,0 +1,42 @@
+[
+  {
+    "word": "coordinate",
+    "phonetic": "/kəʊˈɔːdɪneɪt/",
+    "meaning": "v. 协调，统筹；使配合",
+    "en": "Lina coordinates the meeting schedule for the whole team.",
+    "zh": "Lina 统筹整个团队的会议安排。",
+    "tip": "co（共同）+ ordinate（安排、排序）= 把大家安排到一起 = 协调。记住常用搭配 coordinate with someone（与某人协调）和 coordinate a project（统筹项目）。"
+  },
+  {
+    "word": "estimate",
+    "phonetic": "/ˈestɪmeɪt/",
+    "meaning": "v. 估计，预估；n. 估算，报价",
+    "en": "Could you estimate how long the repair will take?",
+    "zh": "你能估计一下维修需要多长时间吗？",
+    "tip": "把 estimate 想成“先给一个大概的数”。它不是精确计算的 calculate，而是基于现有信息的预估。工作中常说 cost estimate（成本估算）。"
+  },
+  {
+    "word": "routine",
+    "phonetic": "/ruːˈtiːn/",
+    "meaning": "n. 日常事务，惯例；adj. 常规的",
+    "en": "Checking the calendar is part of my morning routine.",
+    "zh": "查看日历是我早晨例行安排的一部分。",
+    "tip": "route 是“路线”，routine 就像每天沿着同一条路线走的事 = 惯例。morning routine 是晨间习惯，routine task 是常规任务。"
+  },
+  {
+    "word": "resolve",
+    "phonetic": "/rɪˈzɒlv/",
+    "meaning": "v. 解决；化解；决定",
+    "en": "We resolved the delivery issue with a quick phone call.",
+    "zh": "我们通过一个简短的电话解决了配送问题。",
+    "tip": "re（再次）+ solve（解开）= 把问题重新拆开并解开 = 解决。resolve a problem 比 solve 更常用于正式沟通，也常搭配 resolve a conflict（化解冲突）。"
+  },
+  {
+    "word": "flexible",
+    "phonetic": "/ˈfleksəbl/",
+    "meaning": "adj. 灵活的；可变通的",
+    "en": "Our manager is flexible about working hours when needed.",
+    "zh": "有需要时，我们的经理对工作时间很灵活。",
+    "tip": "flex 的本义是“弯曲”，能弯而不断就是 flexible（灵活的）。除了身体柔韧，也可形容安排和态度：flexible schedule = 弹性安排。"
+  }
+]
