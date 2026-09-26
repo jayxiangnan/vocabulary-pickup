@@ -20,6 +20,7 @@
 
 | 期数 | 日期 | 单词 |
 |------|------|------|
+| [第 4 期](archive/2026-09-27.md) | 2026-09-27 | tackle · ambiguous · amend · diligent · prevalent |
 | [第 3 期](archive/2026-09-26.md) | 2026-09-26 | coordinate · estimate · routine · resolve · flexible |
 | [第 2 期](archive/2026-09-25.md) | 2026-09-25 | synergy · revenue · nominate · obstacle · genuine |
 | [第 1 期](archive/2026-09-24.md) | 2026-09-24 | threshold · incentive · stringent · pragmatic · circumvent |
